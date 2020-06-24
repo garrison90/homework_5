@@ -17,6 +17,7 @@ function TodoInput({ newTodo, asseptChanges, addTodo, saveChanges }) {
         name="title"
         value={newTodo.title}
         onChange={(e) => asseptChanges(e.target.value)}
+        placeholder="Enter new todo..."
       />
       {newTodo.id ? (
         <button type="submit" className="save-button">
