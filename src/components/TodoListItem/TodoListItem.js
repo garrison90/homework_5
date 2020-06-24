@@ -1,0 +1,24 @@
+import React from "react";
+import "./TodoListItem.css";
+
+function TodoListItem({ todo, onDelete, toogleTodo, selectTodo }) {
+  return (
+    <div className="todo-list-item">
+      <li className="list-item">
+        <input
+          type="checkbox"
+          defaultChecked={todo.isDone}
+          //checked={todo.isDone}
+          onClick={() => toogleTodo(todo.id)}
+        />
+        <span className={`title ${todo.isDone ? "done" : ""}`}>
+          {todo.title}
+        </span>
+        <button onClick={() => selectTodo(todo.id)}>&#9998;</button>
+        <button onClick={() => onDelete(todo.id)}>&#10006;</button>
+      </li>
+    </div>
+  );
+}
+
+export default TodoListItem;
