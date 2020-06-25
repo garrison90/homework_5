@@ -5,7 +5,7 @@ import { deleteTodo, toogleTodo, selectTodo } from "../../store/actions";
 import TodoInput from "../TodoInput/TodoInput";
 import "./Todo.css";
 
-function Todo({ todos, onDelete, toogleTodo, selectTodo }) {
+function Todo({ todos, deleteTodo, toogleTodo, selectTodo }) {
   return (
     <div className="todo">
       <header>Todo List</header>
@@ -14,7 +14,7 @@ function Todo({ todos, onDelete, toogleTodo, selectTodo }) {
           <TodoListItem
             key={todo.id}
             todo={todo}
-            onDelete={onDelete}
+            deleteTodo={deleteTodo}
             toogleTodo={toogleTodo}
             selectTodo={selectTodo}
           />
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchStateToProps = {
-  onDelete: deleteTodo,
+  deleteTodo,
   toogleTodo,
   selectTodo,
 };

@@ -10,7 +10,7 @@ function TodoInput({ newTodo, asseptChanges, addTodo, saveChanges }) {
   }
 
   return (
-    <form onSubmit={submitTodo}>
+    <form action="" onSubmit={submitTodo}>
       <input
         className="input-todo"
         type="text"

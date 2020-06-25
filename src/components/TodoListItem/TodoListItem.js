@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoListItem.css";
 
-function TodoListItem({ todo, onDelete, toogleTodo, selectTodo }) {
+function TodoListItem({ todo, deleteTodo, toogleTodo, selectTodo }) {
   return (
     <div className="todo-list-item">
       <li className="list-item">
@@ -15,7 +15,7 @@ function TodoListItem({ todo, onDelete, toogleTodo, selectTodo }) {
           {todo.title}
         </span>
         <button onClick={() => selectTodo(todo.id)}>&#9998;</button>
-        <button onClick={() => onDelete(todo.id)}>&#10006;</button>
+        <button onClick={() => deleteTodo(todo.id)}>&#10006;</button>
       </li>
     </div>
   );
